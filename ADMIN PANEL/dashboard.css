@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&family=Zilla+Slab&display=swap');
+*{
+     margin: 0;
+     padding: 0;
+     list-style: none;
+     text-decoration: none;
+     box-sizing: border-box;
+     font-family: "Roboto", sans-serif;
+ }
+ 
+ body{
+     background: #fff;
+ }
+ /* Header */
+ .wrapper .header{
+     z-index: 1;
+     background: #8a1212f5;
+     position: fixed;
+     width: calc(100% - 0%);
+     height: 70px;
+     display: flex;
+     top: 0;
+ }
+ 
+ .wrapper .header .header-menu{
+     width: calc(100% - 0%);
+     height: 100%;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 0 20px;
+ }
+ 
+ .wrapper .header .header-menu .title{
+     color: #fff;
+     font-size: 25px;
+     text-transform: uppercase;
+     font-weight: 900;
+ }
+ 
+ .wrapper .header .header-menu .title span{
+     color: whitesmoke;
+ }
+ 
+ .wrapper .header .header-menu .sidebar-btn{
+     color: #fff;
+     position: absolute;
+     margin-left: 260px;
+     font-size: 22px;
+     font-weight: 900;
+     cursor: pointer;
+     transition: 0.3s;
+     transition-property: color;
+ }
+ 
+ .wrapper .header .header-menu .sidebar-btn:hover{
+     color: #4b4b57;
+ }
+ 
+ .wrapper .header .header-menu ul{
+     display: flex;
+ }
+ 
+ .wrapper .header .header-menu ul li a{
+     background: #fff;
+     color: #4b4b57;
+     display: block;
+     margin: 0 10px;
+     font-size: 18px;
+     width: 34px;
+     height: 34px;
+     line-height: 35px;
+     text-align: center;
+     border-radius: 50%;
+     transition: 0.3s;
+     transition-property: background, color;
+ }
+ 
+ .wrapper .header .header-menu ul li a:hover{
+     background: #4b4b57;
+     color: #fff;
+ }
+ .wrapper .header .header-menu ul li a .tooltip{
+     visibility: hidden;
+     width: 120px;
+     background-color: black;
+     color: #fff;
+     text-align: center;
+     border-radius: 6px;
+     font-size:12px;
+     padding: 5px ;
+ }
+ .wrapper .header .header-menu ul li a:hover .tooltip{
+     visibility: visible;
+ }
+ /* Header End */
+ 
+ /* Side-bar */
+ .wrapper .sidebar{
+     z-index: 1;
+     background: rgb(233, 246, 255);
+     position: fixed;
+     top: 70px;
+     width: 250px;
+     height: calc(100% - 9%);
+     transition: 0.3s;
+     transition-property: width;
+     overflow-y: auto;
+ }
+ 
+ .wrapper .sidebar .sidebar-menu{
+     overflow: hidden;
+ }
+ 
+ .wrapper .sidebar .sidebar-menu .profile img{
+     margin: 20px 0;
+     width: 100px;
+     height: 100px;
+     border-radius: 50%;
+ }
+ 
+ .wrapper .sidebar .sidebar-menu .profile p{
+     color: rgb(71, 71, 71);
+     font-weight: 700;
+     margin-bottom: 10px;
+ }
+ 
+ .wrapper .sidebar .sidebar-menu .item{
+     width: 250px;
+     overflow: hidden;
+ }
+ 
+ .wrapper .sidebar .sidebar-menu .item .menu-btn{
+     display: block;
+     color: #ffffff;
+     background:#8a1919;
+     position: relative;
+     padding: 25px 20px;
+     transition: 0.3s;
+     transition-property: color;
+     font-size:18px;
+ }
+ 
+ .wrapper .sidebar .sidebar-menu .item .menu-btn:hover{
+     color: #000000;
+     background:#ffffff;
+ }
+ 
+ .wrapper .sidebar .sidebar-menu .item .menu-btn i{
+     margin-right: 20px;
+ }
+ 
+ .wrapper .sidebar .sidebar-menu .item .menu-btn .drop-down{
+     float: right;
+     font-size: 12px;
+     margin-top: 3px;
+     cursor:pointer;
+ }
+ 
+ .wrapper .sidebar .sidebar-menu .item .sub-menu{
+     background: #8a1717;
+     overflow: auto;
+     max-height:0;
+     transition: 0.3s;
+     transition-property: background, max-height;
+ }
+ 
+ .wrapper .sidebar .sidebar-menu .item .sub-menu a{
+     display: block;
+     position: relative;
+     color: #fff;
+     white-space: nowrap;
+     font-size: 15px;
+     padding: 20px;
+     transition: 0.3s;
+     transition-property: background;
+ }
+ 
+ .wrapper .sidebar .sidebar-menu .item .sub-menu a:hover{
+     background: #8a1717;
+     cursor:pointer;
+ }
+ 
+ .wrapper .sidebar .sidebar-menu .item .sub-menu a:not(last-child){
+     border-bottom: 1px solid #8FC5E9;
+ }
+ 
+ .wrapper .sidebar .sidebar-menu .item .sub-menu i{
+     padding-right: 20px;
+     font-size: 10px;
+ }
+ 
+ .wrapper .sidebar .sidebar-menu .item:target .sub-menu{
+     max-height: 600px;
+ }
+ 
+ .wrapper.collapse .sidebar{
+     width: 70px;
+ }
+ 
+ .wrapper.collapse .sidebar .profile img,
+ .wrapper.collapse .sidebar .profile p,
+ .wrapper.collapse .sidebar a span{
+     display: none;
+ }
+ 
+ .wrapper.collapse .sidebar .sidebar-menu .item .menu-btn{
+     font-size: 23px;
+ }
+ 
+ .wrapper.collapse .sidebar .sidebar-menu .item .sub-menu i{
+     font-size: 18px;
+     padding-left: 3px;
+ }
+ /* Side-Bar End */
+ 
+ .wrapper .mobile-nav{
+     display:none;
+ }
+ /* Main Container */
+ .wrapper .main-container{
+     width: calc(100% - 250px);
+     margin-top: 70px;
+     margin-left: 250px;
+     padding: 15px;
+     background: rgb(255, 255, 255);
+     background-size: cover;
+     min-height: 100vh;
+     transition: 0.3s;
+     overflow:hidden;
+ }
+
+ .wrapper .main-container .dashboard{
+     height:auto;
+     width:100%;
+     padding:10px;
+     top:0;
+     display:block;
+     background:whitesmoke;
+ }
+ 
+ .wrapper.collapse .main-container{
+     width: calc(100% - 70px);
+     margin-left: 70px;
+ }
+ /* Main Container End */
+
+ /* Table Styling */
+ table {
+     font-family: arial, sans-serif;
+     border-collapse: collapse;
+     width: 100%;
+     background:#ffffff; 
+     margin-top:10px;
+     box-shadow: 0 10px 20px rgba(0,0,0,0.05), 0 6px 6px rgba(0,0,0,0.1);
+     position:relative;
+}
+table tr{
+     transition: all .2s ease-in;
+     cursor: pointer;
+}
+table tr:hover {
+     background-color: #f5f5f5;
+     transform: scale(1.02);
+     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+}
+table tr td{
+     background:white;
+     font-family: 'Zilla Slab', serif;
+} 
+table tr td, table tr th {
+     border-bottom: 1px solid #eeeeee;
+     text-align: center;
+     padding: 8px;
+} 
+table tr th{
+     background:#8a2222;
+     color:rgb(247, 247, 247);
+     position:sticky;
+     top:0;
+}
+ /* End Table Styling */
+ 
+ @media screen and (max-width: 780px){
+     .wrapper .sidebar{
+       display: none;
+     }
+   
+     .wrapper .sidebar-btn{
+       display: none;
+     }
+   
+     .wrapper .main-container{
+       margin-left: 0;
+       margin-top: 0;
+       padding: 10px 5px;
+       transition: 0s;
+       width:100%;
+     }
+   
+     .wrapper .mobile-nav{
+       display: block;
+       width: calc(100% - 0%);
+     }
+   
+     .wrapper .mobile-nav .nav-bar{
+       background: #222;
+       width: (100% - 0px);
+       margin-top: 70px;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       padding: 10px 20px;
+     }
+   
+     .wrapper .mobile-nav .nav-bar .mobile-profile-image{
+       width: 50px;
+       height: 50px;
+       border-radius: 50%;
+     }
+   
+     .wrapper .mobile-nav .nav-bar .nav-btn{
+       color: #fff;
+       font-size: 22px;
+       cursor: pointer;
+       transition: 0.5s;
+       transition-property: color;
+     }
+   
+     .wrapper .mobile-nav .nav-bar .nav-btn:hover{
+       color: #7c0606;
+     }
+     .wrapper .mobile-nav .mobile-nav-items{
+         display:none;
+       }
+     .wrapper .mobile-nav .mobile-nav-items.active{
+       background: #2F323A;
+       display:block;
+     }
+     
+     .wrapper .mobile-nav .mobile-nav-items a{
+       color: #fff;
+       display: block;
+       text-align: center;
+       letter-spacing: 1px;
+       line-height: 60px;
+       text-decoration: none;
+       box-sizing: border-box;
+       transition: 0.5s;
+       transition-property: background;
+     }
+   
+     .wrapper .mobile-nav .mobile-nav-items a:hover{
+       background: #8a1515;
+     }
+   
+     .wrapper .mobile-nav .mobile-nav-items i{
+       padding-right: 10px;
+     }
+     .wrapper .main-container .dashboard{
+         height:auto;
+         margin:5px 0;
+     }
+     .wrapper .main-container .dashboard .map-graph .map-graph-card{
+         width:100%;
+         height:250px;
+         margin:10px 0;
+     }
+     .wrapper .main-container .dashboard .current-data .data{
+         width:100%;
+         height:200px;
+         margin:10px 0;
+     }
+ }
